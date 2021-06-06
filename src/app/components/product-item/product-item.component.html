@@ -1,5 +1,5 @@
 <div class="product-container">
-    <img class="product-image" src="{{product.url}}"/>
+    <img class="product-image" routerLink='/product-detail/{{product.id}}' src="{{product.url}}"/>
     <p>{{product.name}}</p>
     <p>{{product.price}}</p>
     <form (ngSubmit)='onSubmit(quantity)'>
