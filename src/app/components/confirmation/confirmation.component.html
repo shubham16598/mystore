@@ -1,1 +1,15 @@
-<p>confirmation works!</p>
+<div class="confirmation-container">
+    <div class="confirmation-items ">
+        <div class="confirmation-header confirmation-item">
+            SUCCESS
+        </div>
+        <div class="confirmation-item">Thank you, <b>{{ name }}</b></div>
+        <div class="confirmation-item">Your <b>${{ total }}</b> order is confirmed!</div>
+        <div class="confirmation-item">We will ship the order soon!!</div>
+        <div class="confirmation-item">
+                <a routerLink="/">
+                    Return to product list
+                </a>
+            </div>
+    </div>
+</div>
