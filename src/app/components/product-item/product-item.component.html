@@ -1,1 +1,10 @@
-<p>product-item works!</p>
+<div class="product-container">
+    <img class="product-image" src="{{product.url}}"/>
+    <p>{{product.name}}</p>
+    <p>{{product.price}}</p>
+    <form (ngSubmit)='onSubmit(quantity)'>
+        <input type='number' class='select-input' name='quantity' [(ngModel)]='quantity' min="0">
+        <br>
+        <div class="addtocart"><button type='submit'> Add To Cart</button></div>
+    </form>
+</div>

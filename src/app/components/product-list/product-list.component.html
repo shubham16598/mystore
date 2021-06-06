@@ -1,1 +1,5 @@
-<p>product-list works!</p>
+<div class="product-container">
+    <div class="product-index">
+      <app-product-item *ngFor="let product of productList" [product]="product" (newItemEvent)="addItem($event,product)"></app-product-item>
+    </div>
+</div>
