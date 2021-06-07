@@ -30,14 +30,14 @@
         </div>
     </div>  
     <div class="form-group">
-        <label>Name: (Enter Valid Name)</label>
+        <label>Name: (Enter Valid Name) (Min Length is Three Alphabets)</label>
         <input type="text"  class="form-control" id="name"
-        [(ngModel)]="name" name="name" pattern="^[a-zA-Z]+$" #myname="ngModel" required>
+        [(ngModel)]="name" name="name" pattern="^[a-zA-Z]+$" minlength="3" #myname="ngModel" required>
         <div [hidden]="myname.valid || myname.pristine"
         class="alert alert-danger">
          Please enter valid Name
         </div>
-    </div>    
+    </div>
     <div class="form-group">
         <button class="btn btn-primary">Checkout</button>
     </div>    

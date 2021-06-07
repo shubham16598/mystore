@@ -27,6 +27,8 @@ export class CartComponent implements OnInit {
     let product = this.cartService.removeItemfromCart(id);
     this.cartProducts = product;
     this.totalPrice();
+    setTimeout(()=>alert("Product Removed from the cart"),500);
+    
   }
 
   onChange(product, quantity):void{
@@ -34,6 +36,7 @@ export class CartComponent implements OnInit {
      this.selectedProduct.quantity = quantity
      this.cartProducts = this.cartService.modifyIteminCart(this.selectedProduct);
      this.totalPrice();
+     setTimeout(()=>alert("Quantity Modified for the product"),500);
   }
   totalPrice(): void{
     this.total = 0;

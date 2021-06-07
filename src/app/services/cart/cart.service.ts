@@ -11,7 +11,7 @@ export class CartService {
   addItemtoCart(cartItem):void{
     const index = this.cartProducts.findIndex(role=> role.id === cartItem.id);
     if (index >-1) {
-      this.cartProducts[index].quantity = cartItem.quantity;
+      this.cartProducts[index].quantity += cartItem.quantity;
     }else{
       this.cartProducts.push(cartItem);
     }
